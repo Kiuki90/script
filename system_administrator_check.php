@@ -37,22 +37,22 @@ $showusers = implode("\n", $checkusers);
 
 
 // Invio Mail
-$to      = 'g.chiuchiolo@neikos.eu';
-$subject = 'SYSTEM ADMINISTRATOR CHECK: CS ares.neikos.it';
+$to      = 'admin@kiuki.it';
+$subject = 'SYSTEM ADMINISTRATOR CHECK';
 $message = "Controlli di sistema per monitorare il corretto funzionamento del Cloud Server:\n\n" .
             "Controllo RAM:\n" . $showram . "\n\n" .
             "Controllo SPAZIO:\n" . $showspace . "\n\n" .
             "Controllo UTENTI:\n" . $showusers . "\n\n" .
             "Controllo PROCESSI:\n" . $showprocessi . "\n\n" ;
 
-$headers = 'From: support@neikos.it' . "\r\n" .
-'Reply-To: g.chiuchiolo@neikos.eu' . "\r\n" .
+$headers = 'From: admin@kiuki.it' . "\r\n" .
+'Reply-To: admin@kiuki.it' . "\r\n" .
 'X-Mailer: PHP/' . phpversion();
 
 $headers = 'MIME-Version: 1.0' . "\r\n";
 //$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-$headers .= 'From: support <support@neikos.it>' . "\r\n";
-$headers .= 'Reply-To: g.chiuchiolo@neikos.eu' . "\r\n" .
+$headers .= 'From: support <admin@kiuki.it>' . "\r\n";
+$headers .= 'Reply-To: admin@kiuki.it' . "\r\n" .
 $headers .= 'Content-Transfer-Encoding: base64' . "\r\n\r\n";
 $headers .= rtrim(chunk_split(base64_encode($message)));
 
