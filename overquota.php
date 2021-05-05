@@ -98,15 +98,15 @@ if (is_array($output) && count($output) > 0) {
 
 	$situation_list = implode("<br>", $values);
 
-        $to      = 'support@neikos.it';
+        $to      = 'admin@kiuki.it';
         $subject = 'Overquota: lista caselle con spazio occupato maggiore o uguale al 95%';
         $message = "<b>Ecco la lista delle caselle di posta che al momento occupano sul server piu' del 95% dello spazio disponibile:<br><br></b><table border='1'><table bgcolor='C0C0C0'><tr><td align='center'><b>CASELLA</b></td><td align='center' width='160px'><b>QUOTA OCCUPATA</b></td><td align='center' width='160px'><b>QUOTA TOTALE</b></td><td align='center' width='160px'><b>QUOTA(%)</b></td></tr>" . $log . "</table></table>";
 
         $headers = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        $headers .= 'From: support <support@neikos.it>' . "\r\n";
-        $headers .= 'Cc: staff@neikos.it' . ' , ' . 'pm@neikos.it' . "\r\n";
-        $headers .= 'Reply-To: support@neikos.it' . "\r\n" ;
+        $headers .= 'From: support <admin@kiuki.it>' . "\r\n";
+        $headers .= 'Cc: admin1@kiuki.it' . ' , ' . 'admin2@kiuki.it' . "\r\n";
+        $headers .= 'Reply-To: admin@kiuki.it' . "\r\n" ;
 
 	$headers .= 'Content-Transfer-Encoding: base64' . "\r\n\r\n";
 	$final_message = rtrim(chunk_split(base64_encode($message)));
