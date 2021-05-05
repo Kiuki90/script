@@ -14,9 +14,9 @@
 $arrayPartizioni[0] = "/";
 
 // Parametri di configurazione
-$server = "linode19.neikos.it"; // Nome del server
+$server = "vs01.kiuki.it"; // Nome del server
 $percMax = 90; // Percentuale limite
-$mail = "support@neikos.it"; // e-mail di destinazione e mittente
+$mail = "admin@kiuki.it"; // e-mail di destinazione e mittente
 $subject = "Spazio quasi terminato su $server";
 
 // Parametri globali da non cambiare.
