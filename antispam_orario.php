@@ -66,21 +66,21 @@ if ($ris > 0) {
 	$email_list = implode("<br>", $email);
 	$situation_list = implode("", $values);
 
-	$to      = 'support@neikos.it';
+	$to      = 'admin@kiuki.it';
         $subject = 'Postfwd: superamento limite mail 24h';
         $message = "<b>Le seguenti caselle di posta hanno raggiunto il limite di invio orario (24h) il giorno "
 		 . date("d/n/o") . " tra le ore " . date("H:i", strtotime('-1 hour')) . " e le ore ". date("H:i", strtotime('-1 minutes')) . ":<br></b>"
 		 . $email_list . "<br><br>E' necessario avvisare il Project per contattare il cliente e verificare se e' stato lui a compiere tali invii.<br><br><b>Ecco la situazione, al momento, delle caselle che hanno inviato posta nelle ultime 24 ore:<br></b><table border='1' bgcolor='DCDCDC'><table bgcolor='C0C0C0'><tr><td align='center'><b>CASELLA</b></td><td align='left'><b>LIMITE</b></td><td align='right'><b>INVIATI</b></td></tr>"
 		 . $situation_list . "</table>";
 
-                 $headers = 'From: support@neikos.it' . "\r\n" .
-                 'Reply-To: support@neikos.it' . "\r\n" .
+                 $headers = 'From: admin@kiuki.it' . "\r\n" .
+                 'Reply-To: admin@kiuki.it' . "\r\n" .
                  'X-Mailer: PHP/' . phpversion();
 
         $headers = 'MIME-Version: 1.0' . "\r\n";
         $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        $headers .= 'From: support <support@neikos.it>' . "\r\n";
-        $headers .= 'Reply-To: support@neikos.it' . "\r\n" .
+        $headers .= 'From: support <admin@kiuki.it>' . "\r\n";
+        $headers .= 'Reply-To: admin@kiuki.it' . "\r\n" .
 	$headers .= 'Content-Transfer-Encoding: base64' . "\r\n\r\n";
 	$headers .= rtrim(chunk_split(base64_encode($message)));
 
