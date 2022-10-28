@@ -108,7 +108,7 @@ if (is_array($output) && count($output) > 0) {
         $headers .= 'From: support <support@neikos.it>' . "\r\n";
         $headers .= 'Reply-To: support@neikos.it' . "\r\n" ;
         $headers .= 'Cc: staff@neikos.it' . ' , ' . 'pm@neikos.it' . "\r\n";
-        $headers .= 'Return-path: g.chiuchiolo@neikos.it' . "\r\n" ;
+        $headers .= 'Return-path: support@neikos.it' . "\r\n" ;
 
 
 	$headers .= 'Content-Transfer-Encoding: base64' . "\r\n\r\n";
